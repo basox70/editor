@@ -1,0 +1,19 @@
+body{
+	width: 90%;
+	margin: 0 auto;
+	font-family: Corbel
+}
+.title{
+	font-size: 3.5em
+}
+.repository{
+	border: 1px solid #000;
+	width: 25%;
+	float: left;
+}
+.edit{
+	float: left;
+}
+.folder, .select{
+	cursor:pointer;
+}
