@@ -14,7 +14,7 @@ body{
 .edit{
 	float: left;
 }
-.folder, .file{
+.folder, .file, .root{
 	cursor:pointer;
 }
 .red{

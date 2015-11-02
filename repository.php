@@ -1,5 +1,8 @@
 <?php
-
+if (isset($_POST["dir"])) {
+	// $file = $_POST["file"];
+	getRepository($_POST["dir"]);
+}
 
 /* 
 &#9654; => triangle vers la droite
@@ -10,15 +13,19 @@ function liste($root,$dir){
 	$folder = 0;
 	$file = 0;
 	echo "<b>current dir : <span id='dir'>$root</span> </b><br/>";
+	if ($root != "../") {
+		echo "<i><span class='root'>back to root</span></i><br/>";
+	}
 	foreach ($dir as $rep) {
 		if (is_dir($root.$rep)){
-			echo "<span class='folder'>&#9654;</span> $rep<br/>";
+			echo "<span class='folder'>&#9654; $rep</span><br/>";
 			$folder +=1;
 		}else{
 			echo "- <span class='file'>$rep</span><br/>";
 			$file +=1;
 		}	
 	}
+	echo "Folder(s) : $folder  -  File(s) : $file";
 }
 
 function getRepository($dir = "../"){
