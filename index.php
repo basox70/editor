@@ -13,7 +13,9 @@ include('repository.php'); ?>
 		<div class='title'>Live Editor</div>
 		<div class='repository'><?php getRepository(); ?></div>
 		<textarea class="edit"></textarea>
+		<!-- <div class="edit"></div> -->
 		<button type='submit'>Cancel</button>
 		<button type='submit'>Save</button>
+
 	</body>
 </html>
